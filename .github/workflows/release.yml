@@ -1,0 +1,57 @@
+# Builds Renderooo and publishes a GitHub Release whenever a version tag is pushed:
+#   git tag v1.0.1 && git push origin v1.0.1
+# Notes come from .github/release-notes/<tag>.md if it exists, otherwise from the commit log.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to (re)build and release, e.g. v1.0.0"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-15
+    env:
+      TAG: ${{ github.event.inputs.tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+
+      - name: Build universal app
+        run: |
+          export RENDEROOO_VERSION="${TAG#v}"
+          export RENDEROOO_BUILD="${{ github.run_number }}"
+          ./build.sh --universal
+          lipo -info build/Renderooo.app/Contents/MacOS/Renderooo
+          codesign --verify --strict build/Renderooo.app
+
+      - name: Package
+        run: |
+          ZIP="Renderooo-${TAG#v}-macOS.zip"
+          ditto -c -k --keepParent build/Renderooo.app "build/$ZIP"
+          SHA=$(shasum -a 256 "build/$ZIP" | cut -d' ' -f1)
+          NOTES=".github/release-notes/$TAG.md"
+          if [ -f "$NOTES" ]; then cp "$NOTES" build/notes.md; else
+            PREV=$(git describe --tags --abbrev=0 "$TAG^" 2>/dev/null || true)
+            git log --pretty='- %s' ${PREV:+$PREV..}"$TAG" > build/notes.md
+          fi
+          printf '\n**SHA-256** (`%s`): `%s`\n' "$ZIP" "$SHA" >> build/notes.md
+          echo "ZIP=$ZIP" >> "$GITHUB_ENV"
+
+      - name: Publish release
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "build/$ZIP" --clobber
+            gh release edit "$TAG" --notes-file build/notes.md
+          else
+            gh release create "$TAG" "build/$ZIP" --title "Renderooo ${TAG#v}" --notes-file build/notes.md --verify-tag
+          fi

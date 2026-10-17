@@ -112,7 +112,18 @@ cd Renderooo
 
 With Xcode 15 or later: open `Renderooo.xcodeproj`, pick the **Renderooo** scheme and press ⌘R. It signs ad hoc, so no developer team is needed.
 
-### Make a release zip
+### Publishing a release
+
+Releases are built and published by GitHub Actions ([`.github/workflows/release.yml`](.github/workflows/release.yml)). Push a version tag:
+
+```sh
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+The workflow builds the universal app on a macOS runner, zips it as `Renderooo-1.0.1-macOS.zip`, and creates the release with its SHA-256. Release notes come from `.github/release-notes/v1.0.1.md` if you write one, otherwise from the commit messages since the last tag.
+
+To make a zip locally instead:
 
 ```sh
 ./build.sh --universal

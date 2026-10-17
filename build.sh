@@ -9,8 +9,8 @@ cd "${0:A:h}"
 APP_NAME="Renderooo"
 EXECUTABLE="Renderooo"
 BUNDLE_ID="local.zquig.md"
-VERSION="1.0"
-BUILD_NUMBER="1"
+VERSION="${RENDEROOO_VERSION:-1.0.0}"   # the release workflow sets this from the git tag
+BUILD_NUMBER="${RENDEROOO_BUILD:-1}"
 MIN_MACOS="13.0"
 
 UNIVERSAL=0; INSTALL=0
