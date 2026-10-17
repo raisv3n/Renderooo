@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1000000000000000000000A /* RenderoooApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000A /* RenderoooApp.swift */; };
+		B1000000000000000000000B /* MarkdownDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000B /* MarkdownDocument.swift */; };
+		B1000000000000000000000C /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000C /* MarkdownRenderer.swift */; };
+		B1000000000000000000000D /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000D /* PreviewController.swift */; };
+		B1000000000000000000000E /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000E /* PreviewWebView.swift */; };
+		B1000000000000000000000F /* LocalSchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000F /* LocalSchemeHandler.swift */; };
+		B10000000000000000000010 /* FileWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000010 /* FileWatcher.swift */; };
+		B10000000000000000000011 /* PreviewCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000011 /* PreviewCommands.swift */; };
+		B10000000000000000000020 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000020 /* style.css */; };
+		B10000000000000000000021 /* render.js in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000021 /* render.js */; };
+		B10000000000000000000022 /* markdown-it.min.js in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000022 /* markdown-it.min.js */; };
+		B10000000000000000000023 /* highlight.min.js in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000023 /* highlight.min.js */; };
+		B10000000000000000000024 /* markdown-it-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000024 /* markdown-it-LICENSE.txt */; };
+		B10000000000000000000025 /* highlightjs-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000025 /* highlightjs-LICENSE.txt */; };
+		B10000000000000000000030 /* PreviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000030 /* PreviewScreen.swift */; };
+		B10000000000000000000031 /* MarkdownEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000031 /* MarkdownEditor.swift */; };
+		B10000000000000000000026 /* markdown-it-footnote.min.js in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000026 /* markdown-it-footnote.min.js */; };
+		B10000000000000000000027 /* texmath.js in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000027 /* texmath.js */; };
+		B10000000000000000000028 /* mermaid.min.js in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000028 /* mermaid.min.js */; };
+		B10000000000000000000029 /* markdown-it-footnote-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000029 /* markdown-it-footnote-LICENSE.txt */; };
+		B1000000000000000000002A /* texmath-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000002A /* texmath-LICENSE.txt */; };
+		B1000000000000000000002B /* mermaid-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000002B /* mermaid-LICENSE.txt */; };
+		B10000000000000000000040 /* katex in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000040 /* katex */; };
+		B10000000000000000000041 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000041 /* AppIcon.icns */; };
+		B10000000000000000000042 /* mermaid-enhance.js in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000042 /* mermaid-enhance.js */; };
+		B10000000000000000000050 /* mermaid-layout-elk.min.js in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000050 /* mermaid-layout-elk.min.js */; };
+		B10000000000000000000051 /* elkjs-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000051 /* elkjs-LICENSE.txt */; };
+		B10000000000000000000052 /* mermaid-layout-elk-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000052 /* mermaid-layout-elk-LICENSE.txt */; };
+		B10000000000000000000032 /* MermaidSourceEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000032 /* MermaidSourceEditor.swift */; };
+		B10000000000000000000033 /* DiagramCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000033 /* DiagramCache.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F1000000000000000000000A /* RenderoooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderoooApp.swift; sourceTree = "<group>"; };
+		F1000000000000000000000B /* MarkdownDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownDocument.swift; sourceTree = "<group>"; };
+		F1000000000000000000000C /* MarkdownRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
+		F1000000000000000000000D /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
+		F1000000000000000000000E /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
+		F1000000000000000000000F /* LocalSchemeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSchemeHandler.swift; sourceTree = "<group>"; };
+		F10000000000000000000010 /* FileWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWatcher.swift; sourceTree = "<group>"; };
+		F10000000000000000000011 /* PreviewCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCommands.swift; sourceTree = "<group>"; };
+		F10000000000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F10000000000000000000020 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		F10000000000000000000021 /* render.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = render.js; sourceTree = "<group>"; };
+		F10000000000000000000022 /* markdown-it.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "markdown-it.min.js"; sourceTree = "<group>"; };
+		F10000000000000000000023 /* highlight.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = highlight.min.js; sourceTree = "<group>"; };
+		F10000000000000000000024 /* markdown-it-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "markdown-it-LICENSE.txt"; sourceTree = "<group>"; };
+		F10000000000000000000025 /* highlightjs-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "highlightjs-LICENSE.txt"; sourceTree = "<group>"; };
+		F100000000000000000000FF /* Renderooo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Renderooo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10000000000000000000030 /* PreviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewScreen.swift; sourceTree = "<group>"; };
+		F10000000000000000000031 /* MarkdownEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownEditor.swift; sourceTree = "<group>"; };
+		F10000000000000000000026 /* markdown-it-footnote.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "markdown-it-footnote.min.js"; sourceTree = "<group>"; };
+		F10000000000000000000027 /* texmath.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = texmath.js; sourceTree = "<group>"; };
+		F10000000000000000000028 /* mermaid.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = mermaid.min.js; sourceTree = "<group>"; };
+		F10000000000000000000029 /* markdown-it-footnote-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "markdown-it-footnote-LICENSE.txt"; sourceTree = "<group>"; };
+		F1000000000000000000002A /* texmath-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "texmath-LICENSE.txt"; sourceTree = "<group>"; };
+		F1000000000000000000002B /* mermaid-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "mermaid-LICENSE.txt"; sourceTree = "<group>"; };
+		F10000000000000000000040 /* katex */ = {isa = PBXFileReference; lastKnownFileType = folder; path = katex; sourceTree = "<group>"; };
+		F10000000000000000000041 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		F10000000000000000000042 /* mermaid-enhance.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "mermaid-enhance.js"; sourceTree = "<group>"; };
+		F10000000000000000000050 /* mermaid-layout-elk.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "mermaid-layout-elk.min.js"; sourceTree = "<group>"; };
+		F10000000000000000000051 /* elkjs-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "elkjs-LICENSE.txt"; sourceTree = "<group>"; };
+		F10000000000000000000052 /* mermaid-layout-elk-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "mermaid-layout-elk-LICENSE.txt"; sourceTree = "<group>"; };
+		F10000000000000000000032 /* MermaidSourceEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MermaidSourceEditor.swift; sourceTree = "<group>"; };
+		F10000000000000000000033 /* DiagramCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramCache.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C10000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000002 /* Renderooo */,
+				A10000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000002 /* Renderooo */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000000A /* RenderoooApp.swift */,
+				F1000000000000000000000B /* MarkdownDocument.swift */,
+				F1000000000000000000000C /* MarkdownRenderer.swift */,
+				F1000000000000000000000D /* PreviewController.swift */,
+				F1000000000000000000000E /* PreviewWebView.swift */,
+				F1000000000000000000000F /* LocalSchemeHandler.swift */,
+				F10000000000000000000010 /* FileWatcher.swift */,
+				F10000000000000000000011 /* PreviewCommands.swift */,
+				F10000000000000000000033 /* DiagramCache.swift */,
+				F10000000000000000000032 /* MermaidSourceEditor.swift */,
+				F10000000000000000000030 /* PreviewScreen.swift */,
+				F10000000000000000000031 /* MarkdownEditor.swift */,
+				A10000000000000000000003 /* Resources */,
+				F10000000000000000000012 /* Info.plist */,
+			);
+			path = Renderooo;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000003 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000041 /* AppIcon.icns */,
+				F10000000000000000000020 /* style.css */,
+				F10000000000000000000021 /* render.js */,
+				F10000000000000000000042 /* mermaid-enhance.js */,
+				F10000000000000000000040 /* katex */,
+				A10000000000000000000004 /* vendor */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000004 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000022 /* markdown-it.min.js */,
+				F10000000000000000000023 /* highlight.min.js */,
+				F10000000000000000000024 /* markdown-it-LICENSE.txt */,
+				F10000000000000000000025 /* highlightjs-LICENSE.txt */,
+				F10000000000000000000052 /* mermaid-layout-elk-LICENSE.txt */,
+				F10000000000000000000051 /* elkjs-LICENSE.txt */,
+				F10000000000000000000050 /* mermaid-layout-elk.min.js */,
+				F10000000000000000000026 /* markdown-it-footnote.min.js */,
+				F10000000000000000000027 /* texmath.js */,
+				F10000000000000000000028 /* mermaid.min.js */,
+				F10000000000000000000029 /* markdown-it-footnote-LICENSE.txt */,
+				F1000000000000000000002A /* texmath-LICENSE.txt */,
+				F1000000000000000000002B /* mermaid-LICENSE.txt */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F100000000000000000000FF /* Renderooo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D10000000000000000000001 /* Renderooo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 910000000000000000000002 /* Build configuration list for PBXNativeTarget "Renderooo" */;
+			buildPhases = (
+				C10000000000000000000001 /* Sources */,
+				C10000000000000000000002 /* Frameworks */,
+				C10000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Renderooo";
+			productName = "Renderooo";
+			productReference = F100000000000000000000FF /* Renderooo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D10000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 910000000000000000000001 /* Build configuration list for PBXProject "Renderooo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000001;
+			productRefGroup = A10000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D10000000000000000000001 /* Renderooo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C10000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000041 /* AppIcon.icns in Resources */,
+				B10000000000000000000020 /* style.css in Resources */,
+				B10000000000000000000021 /* render.js in Resources */,
+				B10000000000000000000042 /* mermaid-enhance.js in Resources */,
+				B10000000000000000000022 /* markdown-it.min.js in Resources */,
+				B10000000000000000000023 /* highlight.min.js in Resources */,
+				B10000000000000000000024 /* markdown-it-LICENSE.txt in Resources */,
+				B10000000000000000000025 /* highlightjs-LICENSE.txt in Resources */,
+				B10000000000000000000052 /* mermaid-layout-elk-LICENSE.txt in Resources */,
+				B10000000000000000000051 /* elkjs-LICENSE.txt in Resources */,
+				B10000000000000000000050 /* mermaid-layout-elk.min.js in Resources */,
+				B10000000000000000000026 /* markdown-it-footnote.min.js in Resources */,
+				B10000000000000000000027 /* texmath.js in Resources */,
+				B10000000000000000000028 /* mermaid.min.js in Resources */,
+				B10000000000000000000029 /* markdown-it-footnote-LICENSE.txt in Resources */,
+				B1000000000000000000002A /* texmath-LICENSE.txt in Resources */,
+				B1000000000000000000002B /* mermaid-LICENSE.txt in Resources */,
+				B10000000000000000000040 /* katex in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C10000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1000000000000000000000A /* RenderoooApp.swift in Sources */,
+				B1000000000000000000000B /* MarkdownDocument.swift in Sources */,
+				B1000000000000000000000C /* MarkdownRenderer.swift in Sources */,
+				B1000000000000000000000D /* PreviewController.swift in Sources */,
+				B1000000000000000000000E /* PreviewWebView.swift in Sources */,
+				B1000000000000000000000F /* LocalSchemeHandler.swift in Sources */,
+				B10000000000000000000010 /* FileWatcher.swift in Sources */,
+				B10000000000000000000011 /* PreviewCommands.swift in Sources */,
+				B10000000000000000000033 /* DiagramCache.swift in Sources */,
+				B10000000000000000000032 /* MermaidSourceEditor.swift in Sources */,
+				B10000000000000000000030 /* PreviewScreen.swift in Sources */,
+				B10000000000000000000031 /* MarkdownEditor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		810000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		810000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		810000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Renderooo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = local.zquig.md;
+				PRODUCT_MODULE_NAME = Renderooo;
+				PRODUCT_NAME = "Renderooo";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		810000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Renderooo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = local.zquig.md;
+				PRODUCT_MODULE_NAME = Renderooo;
+				PRODUCT_NAME = "Renderooo";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		910000000000000000000001 /* Build configuration list for PBXProject "Renderooo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				810000000000000000000001 /* Debug */,
+				810000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		910000000000000000000002 /* Build configuration list for PBXNativeTarget "Renderooo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				810000000000000000000003 /* Debug */,
+				810000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E10000000000000000000001 /* Project object */;
+}

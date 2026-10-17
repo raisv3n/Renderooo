@@ -1,0 +1,5 @@
+{
+  "html": "<pre class=\"code-block mermaid-block\" data-source=\"sequenceDiagram\n    Alice-&gt;&gt;Bob: Hello\n    Bob--&gt;&gt;: missing target\n\n\"><code>sequenceDiagram\n    Alice-&gt;&gt;Bob: Hello\n    Bob--&gt;&gt;: missing target\n\n</code></pre>\n\n",
+  "toc": [],
+  "hasMermaid": true
+}

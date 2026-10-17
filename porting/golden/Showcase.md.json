@@ -1,0 +1,31 @@
+{
+  "html": "<div class=\"front-matter\"><pre class=\"code-block\"><span class=\"code-lang\">yaml</span><code class=\"hljs language-yaml\"><span class=\"hljs-attr\">title:</span> <span class=\"hljs-string\">Zquig</span> <span class=\"hljs-string\">MD</span> <span class=\"hljs-string\">showcase</span>\n<span class=\"hljs-attr\">tags:</span> [<span class=\"hljs-string\">markdown</span>, <span class=\"hljs-string\">preview</span>]</code></pre>\n</div>\n<h1 id=\"zquig-md-showcase\">Zquig MD Showcase</h1>\n<p>A <strong>fast</strong>, <em>offline</em> Markdown previewer. Links: <a href=\"https://github.com\">GitHub</a>, <a href=\"#tables\">jump to tables</a>, <a href=\"Other.md\">another doc</a>.</p>\n<blockquote class=\"markdown-alert markdown-alert-tip\">\n<p class=\"markdown-alert-title\">Tip</p>\n<p>Edit this file in any editor and save — the preview reloads in place.</p>\n</blockquote>\n<h2 id=\"task-list\">Task list</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" class=\"task-list-item-checkbox\" disabled checked> GitHub-flavored Markdown</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" class=\"task-list-item-checkbox\" disabled checked> Syntax highlighting</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" class=\"task-list-item-checkbox\" disabled> Your next idea</li>\n</ul>\n<h2 id=\"tables\">Tables</h2>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:left\">Feature</th>\n<th style=\"text-align:center\">Status</th>\n<th style=\"text-align:right\">Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:left\">Tables</td>\n<td style=\"text-align:center\">✅</td>\n<td style=\"text-align:right\">aligned</td>\n</tr>\n<tr>\n<td style=\"text-align:left\"><s>Electron</s></td>\n<td style=\"text-align:center\">❌</td>\n<td style=\"text-align:right\">never</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"code\">Code</h2>\n<pre class=\"code-block\"><span class=\"code-lang\">swift</span><code class=\"hljs language-swift\"><span class=\"hljs-keyword\">struct</span> <span class=\"hljs-title class_\">Greeting</span> {\n    <span class=\"hljs-keyword\">let</span> name: <span class=\"hljs-type\">String</span>\n    <span class=\"hljs-keyword\">func</span> <span class=\"hljs-title function_\">render</span>() -&gt; <span class=\"hljs-type\">String</span> { <span class=\"hljs-string\">&quot;Hello, <span class=\"hljs-subst\">\\(name)</span>!&quot;</span> } <span class=\"hljs-comment\">// interpolation</span>\n}\n</code></pre>\n\n<pre class=\"code-block\"><span class=\"code-lang\">python</span><code class=\"hljs language-python\"><span class=\"hljs-keyword\">def</span> <span class=\"hljs-title function_\">fib</span>(<span class=\"hljs-params\">n: <span class=\"hljs-built_in\">int</span></span>) -&gt; <span class=\"hljs-built_in\">int</span>:\n    <span class=\"hljs-keyword\">return</span> n <span class=\"hljs-keyword\">if</span> n &lt; <span class=\"hljs-number\">2</span> <span class=\"hljs-keyword\">else</span> fib(n - <span class=\"hljs-number\">1</span>) + fib(n - <span class=\"hljs-number\">2</span>)\n</code></pre>\n\n<p>Inline <code>code</code>, <kbd>⌘</kbd><kbd>R</kbd>, and an autolink: <a href=\"https://example.com\">https://example.com</a></p>\n<h2 id=\"image\">Image</h2>\n<p><img src=\"images/swatch.png\" alt=\"Local swatch\"></p>\n<script>document.body.innerHTML = \"SCRIPT RAN\"</script>\n",
+  "toc": [
+    {
+      "level": 1,
+      "text": "Zquig MD Showcase",
+      "id": "zquig-md-showcase"
+    },
+    {
+      "level": 2,
+      "text": "Task list",
+      "id": "task-list"
+    },
+    {
+      "level": 2,
+      "text": "Tables",
+      "id": "tables"
+    },
+    {
+      "level": 2,
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": 2,
+      "text": "Image",
+      "id": "image"
+    }
+  ],
+  "hasMermaid": false
+}

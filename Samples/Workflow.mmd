@@ -1,0 +1,32 @@
+flowchart LR
+    classDef event fill:#3d6b5e,stroke:#24443b,color:#ffffff
+    classDef trigger fill:#1f3a33,stroke:#1f3a33,color:#ffffff
+    classDef task fill:#eceeef,stroke:#5b6168,color:#1f2328
+    classDef done fill:#e3efe6,stroke:#3d6b5e,color:#1f2328
+
+    subgraph W3 [W3 · Booking and Reminder]
+        A[Direct calendar link<br/>consult calendar] --> B([⚡ Appointment Status<br/>Confirmed])
+        B --> C[Tag behavior-booked-consult<br/>Remove 3 status tags]
+        C --> D[Conversion Event<br/>Move to pipeline:<br/>Consult Booked]
+        D --> E[👤 Prep task for John]
+        E --> F[Email 6 – Confirmation]
+        F --> G{SMS consent?<br/>24h before}
+        G -->|No| H[Email 7 – 24h Reminder]
+        G -->|Yes| I[24-Hour Reminder SMS]
+        H --> J[1-Hour Reminder Email]
+        I --> J
+    end
+
+    subgraph W4 [W4 · Outcome and Recovery]
+        J --> K{Showed?}
+        K -->|Yes| L[Conversion Event<br/>Consult Completed]
+        L --> M([✔ Consult Completed])
+        K -->|No| N{Newer booking<br/>live?}
+        N -->|Yes| O([✔ Newer booking<br/>owns contact])
+        N -->|No| P[Remove behavior-booked-consult<br/>Tag status-no-show]
+    end
+
+    class B trigger
+    class D,L event
+    class E task
+    class M,O done

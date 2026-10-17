@@ -1,0 +1,11 @@
+{
+  "html": "<h1 id=\"other\">Other</h1>\n<p><a href=\"Showcase.md\">Back</a></p>\n",
+  "toc": [
+    {
+      "level": 1,
+      "text": "Other",
+      "id": "other"
+    }
+  ],
+  "hasMermaid": false
+}

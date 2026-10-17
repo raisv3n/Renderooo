@@ -1,0 +1,5 @@
+{
+  "html": "<pre class=\"code-block mermaid-block\" data-source=\"---\ntitle: How Zquig MD opens a file\n---\nflowchart LR\n    A[Double-click in Finder] --&gt; B{Extension?}\n    B --&gt;|.md / .markdown| C[Render Markdown]\n    B --&gt;|.mmd / .mermaid| D[Draw diagram]\n    C --&gt; E[Preview window]\n    D --&gt; E\n    E --&gt; F[Live reload on save]\n\n\"><code>---\ntitle: How Zquig MD opens a file\n---\nflowchart LR\n    A[Double-click in Finder] --&gt; B{Extension?}\n    B --&gt;|.md / .markdown| C[Render Markdown]\n    B --&gt;|.mmd / .mermaid| D[Draw diagram]\n    C --&gt; E[Preview window]\n    D --&gt; E\n    E --&gt; F[Live reload on save]\n\n</code></pre>\n\n",
+  "toc": [],
+  "hasMermaid": true
+}

@@ -1,0 +1,6 @@
+```mermaid
+sequenceDiagram
+    Alice->>Bob: Hello
+    Bob-->>: missing target
+
+```

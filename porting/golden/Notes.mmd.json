@@ -1,0 +1,11 @@
+{
+  "html": "<p>Title: MultiMarkdown note\nAuthor: Zquig</p>\n<h1 id=\"this-mmd-is-multimarkdown-not-mermaid\">This .mmd is MultiMarkdown, not Mermaid</h1>\n<p>It should render as <strong>Markdown</strong>, because it doesn't start with a diagram keyword.</p>\n",
+  "toc": [
+    {
+      "level": 1,
+      "text": "This .mmd is MultiMarkdown, not Mermaid",
+      "id": "this-mmd-is-multimarkdown-not-mermaid"
+    }
+  ],
+  "hasMermaid": false
+}
