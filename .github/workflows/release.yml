@@ -17,7 +17,8 @@ permissions:
 
 jobs:
   release:
-    runs-on: macos-15
+    # The app is built with a recent Swift/macOS SDK; older runner images can't compile it.
+    runs-on: macos-26
     env:
       TAG: ${{ github.event.inputs.tag || github.ref_name }}
       GH_TOKEN: ${{ github.token }}
@@ -26,11 +27,23 @@ jobs:
         with:
           ref: ${{ github.event.inputs.tag || github.ref }}
 
+      - name: Use the newest Xcode on the runner
+        run: |
+          XCODE=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
+          sudo xcode-select -s "$XCODE"
+          echo "$XCODE"; swiftc --version; xcrun --show-sdk-version
+
       - name: Build universal app
         run: |
           export RENDEROOO_VERSION="${TAG#v}"
           export RENDEROOO_BUILD="${{ github.run_number }}"
-          ./build.sh --universal
+          if ! ./build.sh --universal > build.log 2>&1; then
+            cat build.log
+            # Also as one annotation, so the error is readable without opening the logs.
+            echo "::error title=build.sh failed::$(grep -E 'error|Error' build.log | head -25 | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')"
+            exit 1
+          fi
+          tail -3 build.log
           lipo -info build/Renderooo.app/Contents/MacOS/Renderooo
           codesign --verify --strict build/Renderooo.app
 
