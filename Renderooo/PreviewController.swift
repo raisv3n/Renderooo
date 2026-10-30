@@ -531,6 +531,14 @@ final class PreviewController: NSObject, ObservableObject, WKNavigationDelegate,
     /// Saves run one at a time, in order.
     private static let saveQueue = DispatchQueue(label: "Renderooo.save", qos: .userInitiated)
 
+    /// Quitting: let a save started by closing the last window finish before the process exits.
+    /// Bounded, so a stuck file coordinator can't hang the quit.
+    static func waitForPendingSaves(timeout: TimeInterval = 2) {
+        let done = DispatchSemaphore(value: 0)
+        saveQueue.async { done.signal() }
+        _ = done.wait(timeout: .now() + timeout)
+    }
+
     /// Conflict banner: discard local edits and take the version on disk.
     func useDiskVersion() {
         diskChangedWhileEditing = false

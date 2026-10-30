@@ -34,6 +34,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         MermaidSupport.preload()
     }
 
+    // A viewer has nothing to show without a window, so closing the last one quits
+    // instead of leaving the app idling in the Dock.
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        true
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        PreviewController.waitForPendingSaves()
+    }
+
     private func applyAppearance() {
         let appearance = AppAppearance(rawValue: UserDefaults.standard.appAppearance) ?? .system
         NSApp.appearance = appearance.nsAppearance
