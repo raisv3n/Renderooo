@@ -84,6 +84,25 @@
     }
   });
 
+  // Claude's Markdown export drops embedded diagrams and leaves "[embedded content: <title>]"
+  // (written as "&#91;embedded content: …\]"). Show it as a notice instead of raw text.
+  var EMBED_RE = /^\s*\[embedded content:\s*([\s\S]*?)\]\s*$/;
+  md.core.ruler.after("gfm-alerts", "export-placeholders", function (state) {
+    var tokens = state.tokens;
+    for (var i = 0; i + 2 < tokens.length; i++) {
+      if (tokens[i].type !== "paragraph_open" || tokens[i + 1].type !== "inline") continue;
+      var children = tokens[i + 1].children || [];
+      if (!children.every(function (c) { return c.type === "text" || c.type === "text_special"; })) continue;
+      var m = EMBED_RE.exec(children.map(function (c) { return c.content; }).join(""));
+      if (!m) continue;
+      var box = new state.Token("html_block", "", 0);
+      box.content = '<div class="export-placeholder"><p class="export-placeholder-title">Diagram not included in export</p>' +
+        (m[1].trim() ? "<p>" + escapeHtml(m[1].trim()) + "</p>" : "") +
+        "<p>Open the PDF export or the original doc to see it.</p></div>\n";
+      tokens.splice(i, 3, box);
+    }
+  });
+
   // GitHub-style heading ids so "#some-heading" links work.
   md.core.ruler.push("heading-anchors", function (state) {
     var seen = Object.create(null);

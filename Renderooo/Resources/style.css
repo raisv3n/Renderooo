@@ -93,6 +93,11 @@ blockquote > :last-child { margin-bottom: 0; }
 .markdown-alert-warning { --alert: var(--warning); }
 .markdown-alert-caution { --alert: var(--caution); }
 
+.export-placeholder { margin: 0 0 16px; padding: 16px; text-align: center; color: var(--muted); background: var(--code-bg); border: 1px dashed var(--border); border-radius: 6px; }
+.export-placeholder p { margin: 0; }
+.export-placeholder p + p { margin-top: 4px; }
+.export-placeholder-title { font-weight: 600; color: var(--fg); }
+
 table { display: block; width: max-content; max-width: 100%; overflow: auto; border-spacing: 0; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 th { font-weight: 600; }
 th, td { padding: 6px 13px; border: 1px solid var(--border); }
@@ -200,7 +205,7 @@ body.zq-canvas.zq-panning, body.zq-canvas.zq-panning * { cursor: grabbing !impor
   }
   .markdown-body { max-width: none; padding: 0; }
   pre.code-block, pre.code-block code { white-space: pre-wrap; word-break: break-word; overflow: visible; }
-  pre.code-block, table, img, blockquote, .markdown-alert { break-inside: avoid; }
+  pre.code-block, table, img, blockquote, .markdown-alert, .export-placeholder { break-inside: avoid; }
   h1, h2, h3, h4, h5, h6 { break-after: avoid; }
   table { display: table; width: auto; }
   pre.code-block .code-lang { display: none; }
