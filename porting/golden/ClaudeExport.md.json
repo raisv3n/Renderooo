@@ -1,0 +1,11 @@
+{
+  "html": "<h1 id=\"claude-export-placeholder\">Claude export placeholder</h1>\n<p>Claude's Markdown export drops embedded diagrams and leaves a placeholder line. Renderooo shows it as a notice:</p>\n<div class=\"export-placeholder\"><p class=\"export-placeholder-title\">Diagram not included in export</p><p>architecture · Claude, Hermes, and where work lands</p><p>Open the PDF export or the original doc to see it.</p></div>\n<p>The same words inside a sentence, like [embedded content: inline], stay as text.</p>\n",
+  "toc": [
+    {
+      "level": 1,
+      "text": "Claude export placeholder",
+      "id": "claude-export-placeholder"
+    }
+  ],
+  "hasMermaid": false
+}

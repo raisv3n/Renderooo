@@ -45,7 +45,7 @@ Use **Renderooo ▸ Make Renderooo the Default for Markdown & Mermaid** (macOS a
 - **Appearance:** View ▸ Appearance ▸ System / Light / Dark
 
 ### Editing (optional)
-Windows open **read-only**. Press **⌘E** to open the source beside a live preview.
+Documents open **read-only**. Press **⌘E** to open the source beside a live preview.
 - Changes save automatically about a second after you stop typing (⌘S saves right away).
 - Files are saved in place, so Finder tags and permissions survive.
 - If another app changes the file while you have unsaved edits, a banner asks which version to keep. Nothing is overwritten silently.
@@ -175,7 +175,7 @@ Why it's fast:
 ├── Samples/                       Example Markdown and Mermaid files
 ├── tools/                         Icon maker + golden-fixture generators
 ├── porting/golden/                Expected renderer and editor outputs (for the Rust port)
-└── PORTING.md                     Notes for a Linux/Windows port in Rust
+└── PORTING.md                     Notes for a Linux port in Rust
 ```
 
 ---
@@ -200,7 +200,7 @@ Why it's fast:
 
 ## Roadmap
 
-Linux and Windows versions written in Rust are planned. [PORTING.md](PORTING.md) has the architecture notes, and [`porting/golden/`](porting/golden/) holds test fixtures generated from this app.
+A Linux version written in Rust is in progress. [PORTING.md](PORTING.md) has the architecture notes, and [`porting/golden/`](porting/golden/) holds test fixtures generated from this app.
 
 ## License
 
