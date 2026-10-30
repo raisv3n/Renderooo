@@ -15,7 +15,7 @@ Mac changes the Linux port must pick up, newest first. Most are web assets, so c
 
 | Mac version | Change | Files | Port action |
 |---|---|---|---|
-| 1.0.1 | Closing the last window quits the app instead of leaving it in the Dock. A save started by that close finishes (up to 2 s) before the process exits. | `RenderoooApp.swift`, `PreviewController.swift` | Tauri already exits when the last window closes. Make sure the close-time save is flushed before exit. |
+| 1.0.2 | Closing the last window quits the app instead of leaving it in the Dock. A save started by that close finishes (up to 2 s) before the process exits. | `RenderoooApp.swift`, `PreviewController.swift` | Tauri already exits when the last window closes. Make sure the close-time save is flushed before exit. |
 | 1.0.1 | Claude's Markdown export leaves `&#91;embedded content: <title>\]` where a diagram was. A paragraph that is only that placeholder now renders as a "Diagram not included in export" box. The same words inside other text are untouched. | `render.js`, `style.css` | Copy both files. Covered by `porting/golden/ClaudeExport.md.*` |
 
 ---
